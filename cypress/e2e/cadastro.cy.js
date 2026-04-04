@@ -36,3 +36,10 @@ it('Deve fazer cadastro com sucesso, usando Faker', () => {
     cy.get('#user-name').should('contain', nome)
 });
 
+it('Deve preencher cadastro com sucesso - Usando comando customizado ', () => {
+    let email = `teste${Date.now()}@teste.com`
+    let nome = faker.person.fullName({ sex: 'female'})
+    cy.preencherCadastro('nome', email, '11937030208', 'teste@123', 'teste@123')
+    cy.url().should('include', 'dashboard')
+});
+
