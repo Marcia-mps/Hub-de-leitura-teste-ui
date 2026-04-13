@@ -7,6 +7,7 @@ module.exports = defineConfig({
     setupNodeEvents(on, config) {
   },
   baseUrl: "http://localhost:3000/",
-  projectId: "vawrr7"
+  projectId: "vawrr7",
+  video: true
   },
 });
